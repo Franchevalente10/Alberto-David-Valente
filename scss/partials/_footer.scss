@@ -1,0 +1,10 @@
+footer{
+    grid-area: footer;
+    background-color: darksalmon;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    .logo-ig{
+        width: 4rem;
+    }
+}

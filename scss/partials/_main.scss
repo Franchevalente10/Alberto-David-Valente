@@ -1,0 +1,68 @@
+
+//main inicio
+main{ background-color: $background;
+    display: grid;
+    grid-area: main;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:1fr ;
+    grid-template-areas: 
+    "texto imagen";
+
+    .contenedor-texto{
+        grid-area: texto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    height: 100%;
+    width: 100%;
+    .texto{
+        background-color: aqua;
+        width: 60%;
+        padding: 2rem;
+        border-radius: 5%;
+        }
+    }
+    .imagen-alberto{
+        grid-area: imagen;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        img{
+            width: 60%;
+            height: 80%;
+        }
+    }
+
+}
+//main estudios
+.main-estudios{
+    background-color: $background;
+height: 100%;
+width: 100%;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 60% 1fr;
+grid-template-areas: 
+"estudios estudios"
+"cursos img";
+
+.contenedor-estudios{
+    grid-area:estudios ;
+}
+.contenedor-cursos{
+    grid-area: cursos;
+
+
+}
+.contenedor-imagenes{
+    grid-area: img;
+    img{
+        width: 10rem;
+    }
+}
+}
+
+
+
+

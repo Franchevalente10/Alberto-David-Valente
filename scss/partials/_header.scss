@@ -1,0 +1,19 @@
+header{
+    background-color: $background;
+    grid-area: header;
+    display: flex;
+    justify-content: space-evenly;
+
+    .titulo{
+        display: flex;
+        flex-direction: column;
+        }
+
+    .navbar{
+        display: flex;
+        
+        .nav-link{
+            color: white;
+        }
+    } 
+}
