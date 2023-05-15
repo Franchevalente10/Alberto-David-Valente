@@ -1,1 +1,20 @@
-$background:linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(182,185,199,1) 17%, rgba(118,125,151,1) 31%, rgba(75,84,119,1) 46%, rgba(40,51,92,1) 64%, rgba(17,29,74,1) 87%);;
+$background : linear-gradient(90deg, rgba(255,158,0,0.8295693277310925) 0%, rgba(255,188,68,0.8687850140056023) 58%, rgba(255,234,174,0.8015581232492998) 100%);
+;
+
+    
+
+
+@mixin flex-center{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+
+}
+
+@mixin flex-column-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+

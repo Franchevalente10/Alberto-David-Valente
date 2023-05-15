@@ -1,10 +1,20 @@
 footer{
     grid-area: footer;
-    background-color: darksalmon;
+    background-color: #FFEAAE;
     display:flex ;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     .logo-ig{
         width: 4rem;
     }
+    .logo-wsp{
+        width: 4rem;
+       
+    }
+  .logo-ubi{
+    width: 4rem;
+    background-color:darksalmon ;
+  }
+
 }

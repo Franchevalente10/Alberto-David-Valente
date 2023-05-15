@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   height: 100vh;
   width: 100vw;
@@ -14,24 +18,32 @@ body {
 }
 
 header {
-  background-color: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(182, 185, 199) 17%, rgb(118, 125, 151) 31%, rgb(75, 84, 119) 46%, rgb(40, 51, 92) 64%, rgb(17, 29, 74) 87%);
+  width: 100%;
   grid-area: header;
   display: flex;
   justify-content: space-evenly;
+  background: rgb(255, 158, 0);
+  background: linear-gradient(90deg, rgba(255, 158, 0, 0.8295693277) 0%, rgba(255, 188, 68, 0.868785014) 58%, rgba(255, 234, 174, 0.8015581232) 100%);
 }
 header .titulo {
   display: flex;
   flex-direction: column;
 }
+header .titulo .nombre-titulo {
+  font-size: xx-large;
+}
+header .titulo p {
+  font-size: large;
+}
 header .navbar {
   display: flex;
 }
 header .navbar .nav-link {
-  color: white;
+  font-size: medium;
+  color: black;
 }
 
 main {
-  background-color: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(182, 185, 199) 17%, rgb(118, 125, 151) 31%, rgb(75, 84, 119) 46%, rgb(40, 51, 92) 64%, rgb(17, 29, 74) 87%);
   display: grid;
   grid-area: main;
   grid-template-columns: 50% 50%;
@@ -65,7 +77,7 @@ main .imagen-alberto img {
 }
 
 .main-estudios {
-  background-color: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(182, 185, 199) 17%, rgb(118, 125, 151) 31%, rgb(75, 84, 119) 46%, rgb(40, 51, 92) 64%, rgb(17, 29, 74) 87%);
+  grid-area: main;
   height: 100%;
   width: 100%;
   grid-template-columns: 1fr 1fr;
@@ -85,15 +97,147 @@ main .imagen-alberto img {
   width: 10rem;
 }
 
-footer {
-  grid-area: footer;
-  background-color: darksalmon;
+.main-servicios {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "servicios" "trabajo";
+}
+.main-servicios .contenedor-servicios {
+  grid-area: servicios;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-servicios .contenedor-servicios p {
+  background-color: coral;
+  background-size: contain;
+  padding: 2rem;
+  border-radius: 4%;
+  font-size: large;
+  width: 60%;
+}
+.main-servicios .forma-de-trabajar {
+  grid-area: trabajo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-servicios .forma-de-trabajar p {
+  width: 90%;
+  font-size: large;
+}
+
+.main-contacto {
+  background-image: url(../../img/foto\ fondo\ pagina\ pa.jpg);
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20% 1fr;
+  grid-template-areas: "titulo info" "ubicacion contacto";
+}
+.main-contacto .titulo-contacto {
+  grid-area: titulo;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.main-contacto .titulo-contacto h2 {
+  font-size: large;
+  font-weight: bold;
+}
+.main-contacto .section-ubicacion {
+  grid-area: ubicacion;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+.main-contacto .section-ubicacion iframe {
+  width: 70%;
+  height: 50%;
+}
+.main-contacto .section-ubicacion div {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main-contacto .section-ubicacion div p {
+  font-size: large;
+}
+.main-contacto .section-ubicacion div p span {
+  font-weight: bold;
+}
+.main-contacto .section-ubicacion div svg {
+  width: 3rem;
+}
+.main-contacto .info-contacto {
+  grid-area: info;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-contacto .info-contacto h2 {
+  font-size: large;
+  font-weight: bold;
+}
+.main-contacto .section-contacto {
+  height: 100%;
+  width: 100%;
+  grid-area: contacto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-contacto .section-contacto h3 {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+.main-contacto .section-contacto .contacto {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: large;
+}
+.main-contacto .section-contacto .contacto a {
+  color: black;
+  text-decoration: none;
+}
+.main-contacto .section-contacto .contacto a:hover {
+  color: blue;
+  font-weight: bold;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #FFEAAE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 footer .logo-ig {
   width: 4rem;
+}
+footer .logo-wsp {
+  width: 4rem;
+}
+footer .logo-ubi {
+  width: 4rem;
+  background-color: darksalmon;
 }
 
 /*# sourceMappingURL=style.css.map */

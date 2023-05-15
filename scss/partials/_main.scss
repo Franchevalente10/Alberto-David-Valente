@@ -1,6 +1,7 @@
 
 //main inicio
-main{ background-color: $background;
+main{ 
+    
     display: grid;
     grid-area: main;
     grid-template-columns: 50% 50%;
@@ -9,6 +10,7 @@ main{ background-color: $background;
     "texto imagen";
 
     .contenedor-texto{
+    
         grid-area: texto;
         display: flex;
         flex-direction: column;
@@ -34,11 +36,11 @@ main{ background-color: $background;
             height: 80%;
         }
     }
-
+    
 }
 //main estudios
 .main-estudios{
-    background-color: $background;
+    grid-area: main;
 height: 100%;
 width: 100%;
 grid-template-columns: 1fr 1fr;
@@ -63,6 +65,133 @@ grid-template-areas:
 }
 }
 
+ 
+
+//main servicios
+
+.main-servicios{
+    grid-area: main;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr ;
+    grid-template-areas: 
+    "servicios"
+    "trabajo";
 
 
 
+.contenedor-servicios{
+    grid-area: servicios;
+  @include flex-column-center;
+  
+
+
+  p{background-color: coral;
+    background-size:contain;
+    padding:2rem;
+    border-radius: 4%;
+    font-size: large;
+    width: 60%;
+  }
+}
+.forma-de-trabajar{
+    grid-area: trabajo;
+    @include flex-column-center;
+
+    p{
+        width: 90%;
+        font-size: large;
+    }
+}
+
+
+}
+
+//main contacto
+.main-contacto{
+    background-image: url(../../img/foto\ fondo\ pagina\ pa.jpg);
+grid-area: main;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 20% 1fr;
+grid-template-areas: 
+"titulo info"
+"ubicacion contacto";
+
+.titulo-contacto{
+    grid-area: titulo;
+    @include flex-center;
+    h2{
+        font-size: large;
+        font-weight: bold;
+    }
+
+}
+.section-ubicacion{
+    grid-area: ubicacion;
+    @include flex-column-center;
+    gap: 3rem;
+    
+    iframe{
+        width: 70%;
+        height: 50%;
+    }
+    div{display: flex;
+    flex-direction:row;
+    @include flex-center;
+    gap: 1rem;
+    p{
+        span{
+            font-weight: bold;
+        }
+        font-size: large;
+    }
+    svg{
+        width: 3rem;
+    }
+    }
+   
+}
+
+.info-contacto{
+    grid-area: info;
+    @include flex-center;
+
+    h2{
+        
+        font-size: large;
+        font-weight: bold;
+    }
+}
+.section-contacto{
+    height: 100%;
+    width: 100%;
+    grid-area: contacto;
+    @include flex-column-center;
+    h3{text-align: center;
+        font-size: large;
+        font-weight: bold;
+}
+.contacto{
+    height: 60%;
+    width: 100%;
+    @include flex-column-center;
+    gap: 3rem;
+    font-size: large;
+    
+  
+
+    a{
+      
+        color: black;
+        text-decoration: none;
+        &:hover{
+            color: blue;
+            font-weight: bold;
+        }
+    }
+    
+}
+
+}
+}

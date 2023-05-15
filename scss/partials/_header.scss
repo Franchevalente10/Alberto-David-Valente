@@ -1,19 +1,29 @@
 header{
-    background-color: $background;
+    width: 100%;
     grid-area: header;
     display: flex;
     justify-content: space-evenly;
+    background: rgb(255,158,0);
+background: $background;
 
     .titulo{
         display: flex;
         flex-direction: column;
+        
+        .nombre-titulo{
+            font-size:xx-large; 
         }
+        p{
+            font-size: large;
+        }
+    }
 
     .navbar{
         display: flex;
         
         .nav-link{
-            color: white;
+            font-size: medium;
+            color: black;
         }
     } 
 }
